@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мәліметтер қоры бойынша тест</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="login-screen">
+    <h2>Қош келдіңіз!</h2>
+    <input type="text" id="username" placeholder="Атыңызды енгізіңіз"><br>
+    <input type="password" id="password" placeholder="Құпиясөз енгізіңіз"><br>
+    <button onclick="authorize()">Кіру</button>
+</div>
+
+<div id="settings-screen" style="display:none;">
+    <h2>Параметрлер</h2>
+    <label for="category">Тақырыпты таңдаңыз:</label>
+    <select id="category">
+        <option value="sql">SQL</option>
+        <option value="theory">Теория</option>
+    </select><br>
+    <label for="questionCount">Сұрақтар саны:</label>
+    <select id="questionCount">
+        <option value="60">6 Сұрақ (колледж)</option>
+        <option value="140">6 Сұрақ (11-сынып)</option>
+    </select><br>
+    <button onclick="startQuiz()">Тестті бастау</button>
+</div>
+
+<div id="quiz-screen" style="display:none;">
+    <h2 id="welcome"></h2>
+    <div id="timer">Уақыт: 00:00</div>
+    <form id="quizForm"></form>
+    <button onclick="submitQuiz()">Жауаптарды жіберу</button>
+</div>
+
+<div id="result-screen" style="display:none;">
+    <h2>Нәтиже</h2>
+    <p id="result"></p>
+    <p id="saved"></p>
+    <button onclick="location.reload()">Қайта бастау</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
